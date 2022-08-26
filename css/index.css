@@ -3,10 +3,7 @@ body {
     margin: 0;
     background-size: cover;
     background-attachment: fixed;
-  }
-  
-  * {
-    box-sizing: border-box;
+    background-color: #fffbf7;
   }
   
   .contenedor{
@@ -43,7 +40,9 @@ body {
   }
   
   p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+    color: #;
   }
   
   .link{
@@ -55,16 +54,7 @@ body {
   .link:hover{
     color: cadetblue;
   }
-  
-  @media(min-width:768px)
-  {
-    .formulario{
-      margin: auto;
-      width: 500px;
-      margin-top: 150px;
-      border-radius: 2%;
-    }
-  }
+
   
   h1,h2,h3,h4,h5{
       font-family: 'Fjalla One', sans-serif;
@@ -83,6 +73,12 @@ body {
   .card{
       border: 0 !important;
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      vertical-align: middle;
+      flex-direction: column;
   }
   
   .responsive-iframe{
@@ -104,22 +100,9 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    background-color: #fffbf7;
-}
-
 .presentacion > *{
     display: flex;
     justify-content: center;
-}
-
-.card {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    vertical-align: middle;
-    flex-direction: column;
 }
 
 .card > img {
@@ -138,4 +121,15 @@ body {
 .social > img {
     width: 30px;
     border-radius: 50%;
+}
+
+  
+@media(min-width:768px)
+{
+  .formulario{
+    margin: auto;
+    width: 500px;
+    margin-top: 150px;
+    border-radius: 2%;
+  }
 }
