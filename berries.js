@@ -24,4 +24,24 @@ function getBerryDataFromName(berryName) {
         })
 }
 
+function getAllBerriesFirmnesses() {
+    let newUrl = 'https://pokeapi.co/api/v2/berry-firmness'
+    getBerries(newUrl)
+        .then(data => {
+            data['results'].forEach(datum => {
+                console.log(datum['name'])
+            })
+        })
+}
+
+function getBerrySortFirmness(firmness) {
+    let newUrl = 'https://pokeapi.co/api/v2/berry-firmness/' + firmness
+    getBerries(newUrl)
+        .then(data => {
+            console.log(data)
+        })
+}
 //getBerryDataFromName('cheri')
+//getAllBerriesFirmnesses()
+//getBerrySortFirmness('soft')
+
