@@ -1,16 +1,27 @@
-function getBerries() {
-    return fetch('https://pokeapi.co/api/v2/berry/?offset=0&limit=64')
+var url = 'https://pokeapi.co/api/v2/berry/?offset=0&limit=64'
+
+function getBerries(urlApi) {
+    return fetch(urlApi)
     .then(response => {
         return response.json();
     })
 }
 
-getBerries()
-    .then(data => {
-        //console.log(JSON.stringify(data, null, 4))
-        //console.log(data['results'][0]['name'])
-        data['results'].forEach(datum => {
-            console.log(datum['name'])
-        });
-    })
+function getAllBerriesName() {
+    getBerries(url)
+        .then(data => {
+            data['results'].forEach(datum => {
+                console.log(datum['name'])
+            });
+        })
+}
 
+function getBerryDataFromName(berryName) {
+    let newUrl = 'https://pokeapi.co/api/v2/berry/' + berryName
+    getBerries(newUrl) 
+        .then(data => {
+            console.log(data)
+        })
+}
+
+//getBerryDataFromName('cheri')
